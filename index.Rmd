@@ -31,6 +31,7 @@ Is regime change from democracy to authoritarian government accompanied by a dec
 ```{r}
 library(readr)
 library(tidyverse)
+library(tidyr)
 education <- read_csv("~/Data/world-education-data 2.csv")
 glimpse(education)
 Regime_chng <-  read_csv("~/Data/rgj2010.csv") 
@@ -202,21 +203,29 @@ These graphs show what individuals countries primary school enrollment rate look
 ba_enroll_chrt <- Data |> 
   drop_na(event_time)|>
   mutate(
-    before_after = if_else(event_time > 0, "After","Before"))|>
+    before_after = if_else(event_time < 0, "Before","After"))|>
   group_by(before_after)|>
-  summarise(mean(school_enrol_primary_pct, na.rm= TRUE))
+  summarise(mean_enroll = mean(school_enrol_primary_pct, na.rm= TRUE))|>
+  pivot_wider(
+    names_from= "before_after",
+    values_from = "mean_enroll"
+  )
 ba_enroll_chrt|>
-knitr::kable(digits=2, col.names = c("Timing", "percent primary school enrollment"))
+knitr::kable(caption= "Primary school enrollment Before and after regime change", digits=2, col.names = c("Before", "After"))
 ```
  
 
 ```{r}
  pri_enroll_chrt <- Data |> 
   group_by(rgjtype)|>
-  summarise(mean(school_enrol_primary_pct, na.rm= TRUE)) |>
-  filter(rgjtype %in% c("A", "D"))
+  summarise(mean_enroll = mean(school_enrol_primary_pct, na.rm= TRUE)) |>
+  filter(rgjtype %in% c("D", "A")) |>
+  pivot_wider(
+    names_from= "rgjtype",
+    values_from = "mean_enroll"
+  ) 
 pri_enroll_chrt|>
-knitr::kable(digits=2, col.names = c("Regime Type", "Percent Primary school Enrollment"))
+knitr::kable(caption = "primary school enrollment by regime type", digits=2, col.names = c("Authoritarian", "Democratic"))
 ```
 
 ## Interpretation

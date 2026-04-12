@@ -1559,6 +1559,7 @@ Government Types and policy</p>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyr.tidyverse.org'>tidyr</a></span><span class='op'>)</span></span>
 <span><span class='va'>education</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Data/world-education-data 2.csv"</span><span class='op'>)</span></span>
 <span><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>education</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -1832,27 +1833,28 @@ $ rgjfdem  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</c
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ba_enroll_chrt</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span> </span>
 <span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
-<span>    before_after <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;</span> <span class='fl'>0</span>, <span class='st'>"After"</span>,<span class='st'>"Before"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>    before_after <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&lt;</span> <span class='fl'>0</span>, <span class='st'>"Before"</span>,<span class='st'>"After"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>before_after</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>mean_enroll <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
+<span>    names_from<span class='op'>=</span> <span class='st'>"before_after"</span>,</span>
+<span>    values_from <span class='op'>=</span> <span class='st'>"mean_enroll"</span></span>
+<span>  <span class='op'>)</span></span>
 <span><span class='va'>ba_enroll_chrt</span><span class='op'>|&gt;</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Timing"</span>, <span class='st'>"percent primary school enrollment"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption<span class='op'>=</span> <span class='st'>"Primary school enrollment Before and after regime change"</span>, digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Before"</span>, <span class='st'>"After"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
+<caption><span id="tab:unnamed-chunk-13">Table 1: </span>Primary school enrollment Before and after regime change</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Timing</th>
-<th style="text-align: right;">percent primary school enrollment</th>
+<th style="text-align: right;">Before</th>
+<th style="text-align: right;">After</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">After</td>
-<td style="text-align: right;">92.25</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Before</td>
-<td style="text-align: right;">95.99</td>
+<td style="text-align: right;">92.93</td>
+<td style="text-align: right;">95.59</td>
 </tr>
 </tbody>
 </table>
@@ -1861,25 +1863,26 @@ $ rgjfdem  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</c
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span> <span class='va'>pri_enroll_chrt</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>rgjtype</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>rgjtype</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A"</span>, <span class='st'>"D"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>mean_enroll <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>rgjtype</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"D"</span>, <span class='st'>"A"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
+<span>    names_from<span class='op'>=</span> <span class='st'>"rgjtype"</span>,</span>
+<span>    values_from <span class='op'>=</span> <span class='st'>"mean_enroll"</span></span>
+<span>  <span class='op'>)</span> </span>
 <span><span class='va'>pri_enroll_chrt</span><span class='op'>|&gt;</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Regime Type"</span>, <span class='st'>"Percent Primary school Enrollment"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption <span class='op'>=</span> <span class='st'>"primary school enrollment by regime type"</span>, digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Authoritarian"</span>, <span class='st'>"Democratic"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
+<caption><span id="tab:unnamed-chunk-14">Table 2: </span>primary school enrollment by regime type</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Regime Type</th>
-<th style="text-align: right;">Percent Primary school Enrollment</th>
+<th style="text-align: right;">Authoritarian</th>
+<th style="text-align: right;">Democratic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">A</td>
-<td style="text-align: right;">98.70</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D</td>
+<td style="text-align: right;">98.7</td>
 <td style="text-align: right;">104.11</td>
 </tr>
 </tbody>
