@@ -1,6 +1,6 @@
 ---
 title: "PS270 Final Project"
-author: "Your Name Here"
+author: "Azalea Steffes"
 description: "My final project"
 output:
   distill::distill_article:
@@ -11,4 +11,214 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to...
+Here are a couple topics I am interested in exploring:
+data related to the effectiveness of nuclear weapons being used as leverage in conflicts: can nuclear weapons compel states to change their policies.
+"Replication Data for: Crisis Bargaining and Nuclear Blackmail"
+
+Environmental justice the intersection between poverty and climate change based harms
+
+Authoritarian governments and climate policy
+Government Types and policy
+
+demographic benefits from the homestead act who received the land who gained the title etc..
+
+## My Hypothesis
+
+Is regime change from democracy to authoritarian government accompanied by a decrease in education investment? By looking at countries who have transitioned from democratic to authoritarian governments I want to analyze how this transition may correlate with decreasing investment in education by the government. By looking at data on education and regime change from three countries: Nicaragua, Venezuela,and Hungary I want to analyze how lowered investment in education is a key indicator of regime change and democratic backsliding. Nicaragua, Venezuala and Hungary are all unique because they have all recently changed from deomcratic to authoritarian regimes. Freedom to get an education is an important indicator of how democratic a country is but in my research I want to specifically analyze how states lack of investment in education contributes to democratic backsliding and regime change. The first data set I’m using contains information about every country and investment in education and the second data set I’m using contains information about regime changes democratic back sliding and democracy. Investment in education is measured as a percentage of each country's GDP. The second data set measures democracy on a dichotomous scale. Countries who cross a certain threshold are measured as autocracies and this threshold is determined by a country holding open elections. I will track countries' investment in education in years leading up to a regime change and after a regime change to see how government investment in education correlates with regime change. For my hypothesis to be supported by the data, education spending should decrease significantly in years leading up to regime change and continue decreasing after the regime change occurs. My hypothesis would be disproved if a country's funding for education increased before a regime change occurred and continued to increase afterwards.
+
+## Loading in the Data
+
+```{r}
+library(readr)
+library(tidyverse)
+education <- read_csv("~/Data/world-education-data 2.csv")
+glimpse(education)
+Regime_chng <-  read_csv("~/Data/rgj2010.csv") 
+glimpse(Regime_chng)
+
+
+```
+```{r}
+Data <-
+  inner_join(education, Regime_chng,
+         by = c("year", "country_code" = "pitfcode"))
+
+```
+
+
+```{r}
+countries <- c("NIC", "VEN", "HUN" )
+VEN <- Data |>
+ filter(country_code %in% "VEN")
+```
+
+```{r}
+library(tidyverse)
+VEN_diagram <- VEN |>
+  ggplot(mapping = aes(x=  year ,
+                y = pri_comp_rate_pct,
+                fill= country_code, color = country_code)) +
+  labs(x= "year",
+       y = "primary School Completion Rate",
+       title = "Primary School Completion Rate after Regime Change in Venezuala") +
+  geom_point() +
+  geom_smooth() +
+  geom_vline(xintercept = 2005, color = "red")
+  
+VEN_diagram
+```
+
+
+```{r}
+
+library(tidyverse)
+VEN_d <- VEN |>
+  ggplot(mapping = aes(x=  year ,
+                y = school_enrol_primary_pct,
+                fill= country_code, color = country_code)) +
+  labs(x= "year",
+       y = "primary School Completion Rate",
+       title = "Primary School enrollment after Regime Change in Venezuala") +
+  geom_point() +
+  geom_smooth() +
+  geom_vline(xintercept = 2005, color = "red")
+  
+VEN_d
+```
+
+
+
+
+
+
+```{r}
+EC <- Data |>
+ filter(country_code %in% "ECU")
+```
+
+```{r}
+diagram <- EC |>
+  ggplot(mapping = aes(x=  year ,
+                y = pri_comp_rate_pct,
+                fill= country_code, color = country_code)) +
+  labs(x= "year",
+       y = "primary School Completion Rate",
+       title = "Primary School Completion Rate after Regime Change in Ecuador") +
+  geom_point() +
+  geom_smooth() +
+  geom_vline(xintercept = 
+               c (2000,2007), color = "red")
+  
+diagram
+```
+
+
+```{r}
+SEN <- Data |>
+ filter(country_code %in% "SEN")
+```
+
+```{r}
+diagram_1 <- SEN |>
+  ggplot(mapping = aes(x=  year ,
+                y = pri_comp_rate_pct,
+                fill= country_code, color = country_code)) +
+  labs(x= "year",
+       y = "primary School Completion Rate",
+       title = "Primary School Completion Rate after Regime Change Sengal") +
+  geom_point() +
+  geom_smooth() +
+  geom_vline(xintercept = 2007, color = "red")
+  
+diagram_1
+```
+
+These three graphs attempt to analyze how authoritarian regime change effects education over time. While there is no clear pattern in these three countries, I hope to work with education data that goes farther into the past with less missing data to look at more countries and see if there is any trend.
+
+
+## Prepping The Data
+
+```{r}
+trans <- Data |>
+  filter(country_code %in% c("SEN", "COM", "ECU", "FJI", "GNB", "IRQ", "KEN", "MAC", "PAK", "PNG", "RUS", "SEN", "VEN"))
+trans
+```
+
+
+```{r}
+Data <- Data |>
+  group_by(country_code) |>
+  mutate(change_year = year[rgjtrans == -1] [1],
+         event_time = year - change_year) |>
+  ungroup()
+
+align <- Data |>
+        filter (event_time >= -5 & event_time <= 5)
+align |>
+  select(country_code, year, rgjtrans, change_year, event_time)
+```
+
+
+
+
+## Visualizing primary school enrollment before and after an Authoritarian regime change
+
+
+```{r}
+before_rg_change <- Data |>
+  filter(event_time < 0) |>
+  ggplot(mapping = aes(x = event_time,
+                       y = school_enrol_primary_pct,
+                       color = country_code)) +
+  geom_line()+
+  geom_point(na.rm = TRUE) +
+  labs(title = "Primary School Enrollment Before Regime Change",
+       x = "Years Before Regime Change",
+       y = "Percent Primary School Enrollment") 
+before_rg_change
+
+after_rg_change <- Data |>
+  filter(event_time >= 0) |>
+  ggplot(mapping = aes(x = event_time,
+                       y = school_enrol_primary_pct,
+                       color = country_code)) +
+  geom_line() +
+  geom_point(na.rm = TRUE) +
+  labs(title = "Primary School Enrollment After Regime Change",
+       x = "Years Since Regime Change",
+       y = "Primary School Enrollment (%)")
+after_rg_change
+
+```
+
+## Interpretation
+
+These graphs show what individuals countries primary school enrollment rate look like before and after regime change however there is not very clear patterns within while some countries primary school enrollment goes up drastically before an authoritarian regime change others enrollment shoots down. In the After graph again there is not a super clear visual pattern countries have different patterns however there is more data on countries after the regime change and more countries to analyze. Overall in the after graph primary school enrollment rates seem sightly more stable.
+
+
+## Visualising pattern before and after regime change
+
+```{r}
+ba_enroll_chrt <- Data |> 
+  drop_na(event_time)|>
+  mutate(
+    before_after = if_else(event_time > 0, "After","Before"))|>
+  group_by(before_after)|>
+  summarise(mean(school_enrol_primary_pct, na.rm= TRUE))
+ba_enroll_chrt|>
+knitr::kable(digits=2, col.names = c("Timing", "percent primary school enrollment"))
+```
+ 
+
+```{r}
+ pri_enroll_chrt <- Data |> 
+  group_by(rgjtype)|>
+  summarise(mean(school_enrol_primary_pct, na.rm= TRUE)) |>
+  filter(rgjtype %in% c("A", "D"))
+pri_enroll_chrt|>
+knitr::kable(digits=2, col.names = c("Regime Type", "Percent Primary school Enrollment"))
+```
+
+## Interpretation
+Before authoritarian regime changes countries have higher rates of primary school enrollment 3.75 percent higher than after a country has been taken over by an authoritarian government. This makes sense because overall Authoritarian regime types have much lower rates of primary school enrollment as compared to democracies, so when regime type changes from a democratic government to an authoritarian one it would make sense that primary school enrollment would go down.
+
