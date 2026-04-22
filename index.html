@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-12-1.png","index_files/figure-html5/unnamed-chunk-12-2.png","index_files/figure-html5/unnamed-chunk-13-1.png","index_files/figure-html5/unnamed-chunk-13-2.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/figure-html5/unnamed-chunk-7-1.png","index_files/figure-html5/unnamed-chunk-9-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.30/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-12-1.png","index_files/figure-html5/unnamed-chunk-12-2.png","index_files/figure-html5/unnamed-chunk-13-1.png","index_files/figure-html5/unnamed-chunk-13-2.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/figure-html5/unnamed-chunk-6-1.png","index_files/figure-html5/unnamed-chunk-7-1.png","index_files/figure-html5/unnamed-chunk-9-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.30/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1544,286 +1544,77 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-thoughts">Project thoughts</h2>
-<p>Here are a couple topics I am interested in exploring:
-data related to the effectiveness of nuclear weapons being used as leverage in conflicts: can nuclear weapons compel states to change their policies.
-“Replication Data for: Crisis Bargaining and Nuclear Blackmail”</p>
-<p>Environmental justice the intersection between poverty and climate change based harms</p>
-<p>Authoritarian governments and climate policy
-Government Types and policy</p>
-<p>demographic benefits from the homestead act who received the land who gained the title etc..</p>
-<h2 id="my-hypothesis">My Hypothesis</h2>
-<p>Is regime change from democracy to authoritarian government accompanied by a decrease in education investment? By looking at countries who have transitioned from democratic to authoritarian governments I want to analyze how this transition may correlate with decreasing investment in education by the government. By looking at data on education and regime change from three countries: Nicaragua, Venezuela,and Hungary I want to analyze how lowered investment in education is a key indicator of regime change and democratic backsliding. Nicaragua, Venezuala and Hungary are all unique because they have all recently changed from deomcratic to authoritarian regimes. Freedom to get an education is an important indicator of how democratic a country is but in my research I want to specifically analyze how states lack of investment in education contributes to democratic backsliding and regime change. The first data set I’m using contains information about every country and investment in education and the second data set I’m using contains information about regime changes democratic back sliding and democracy. Investment in education is measured as a percentage of each country’s GDP. The second data set measures democracy on a dichotomous scale. Countries who cross a certain threshold are measured as autocracies and this threshold is determined by a country holding open elections. I will track countries’ investment in education in years leading up to a regime change and after a regime change to see how government investment in education correlates with regime change. For my hypothesis to be supported by the data, education spending should decrease significantly in years leading up to regime change and continue decreasing after the regime change occurs. My hypothesis would be disproved if a country’s funding for education increased before a regime change occurred and continued to increase afterwards.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>Is regime change from democracy to authoritarian government accompanied by a in primary school enrollment? By looking at countries who have transitioned from democratic to authoritarian governments I want to analyze how this transition may correlate with decreasing investment in education by the government. By looking at data on education and regime change from three countries: Nicaragua, Venezuela,and Hungary I want to analyze how lowered investment in education is a key indicator of regime change and democratic backsliding. Nicaragua, Venezuala and Hungary are all unique because they have all recently changed from Democratic to authoritarian regimes. Freedom to get an education is an important indicator of how democratic a country is but in my research I want to specifically analyze how states lack of investment in education contributes to democratic backsliding and regime change. The first data set I’m using contains information about every country and investment in education and the second data set I’m using contains information about regime changes democratic back sliding and democracy. Investment in education is measured as a percentage of each country’s GDP. The second data set measures democracy on a dichotomous scale. Countries who cross a certain threshold are measured as autocracies and this threshold is determined by a country holding open elections. I will track countries’ investment in education in years leading up to a regime change and after a regime change to see how government investment in education correlates with regime change. For my hypothesis to be supported by the data, education spending should decrease significantly in years leading up to regime change and continue decreasing after the regime change occurs. My hypothesis would be disproved if a country’s funding for education increased before a regime change occurred and continued to increase afterwards.</p>
 <h2 id="loading-in-the-data">Loading in the Data</h2>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyr.tidyverse.org'>tidyr</a></span><span class='op'>)</span></span>
-<span><span class='va'>education</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Data/world-education-data 2.csv"</span><span class='op'>)</span></span>
-<span><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>education</span><span class='op'>)</span></span></code></pre>
-</div>
-<pre><code>Rows: 5,892
-Columns: 11
-$ country                    &lt;chr&gt; &quot;Afghanistan&quot;, &quot;Afghanistan&quot;, &quot;Af…
-$ country_code               &lt;chr&gt; &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;…
-$ year                       &lt;dbl&gt; 1999, 2000, 2001, 2002, 2003, 200…
-$ gov_exp_pct_gdp            &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 4.684…
-$ lit_rate_adult_pct         &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ pri_comp_rate_pct          &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ pupil_teacher_primary      &lt;dbl&gt; 33.18571, NA, NA, NA, NA, NA, NA,…
-$ pupil_teacher_secondary    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, 3…
-$ school_enrol_primary_pct   &lt;dbl&gt; 27.29885, 22.16299, 22.90859, 75.…
-$ school_enrol_secondary_pct &lt;dbl&gt; NA, NA, 14.47151, NA, 14.07805, 1…
-$ school_enrol_tertiary_pct  &lt;dbl&gt; NA, NA, NA, NA, 1.38107, 1.38966,…</code></pre>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Regime_chng</span> <span class='op'>&lt;-</span>  <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Data/rgj2010.csv"</span><span class='op'>)</span> </span>
-<span><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>Regime_chng</span><span class='op'>)</span></span></code></pre>
-</div>
-<pre><code>Rows: 9,730
-Columns: 57
-$ pitfcode &lt;chr&gt; &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;AFG&quot;, &quot;A…
-$ cowcode  &lt;dbl&gt; 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 7…
-$ year     &lt;dbl&gt; 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 196…
-$ rgjtype  &lt;chr&gt; &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;…
-$ rgjdem   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjtrans &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjdurd  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjtaut  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjatype &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjaltl  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjaltlt &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjaltp  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjaltpt &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjdura  &lt;dbl&gt; 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 2…
-$ rgjtdem  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjepdt  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjhd    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjhd2   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjhd3   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjyrdt  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjepdl  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjepd1  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjepd1a &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ rgjtadt  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjtdat  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjtdamc &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjtdaac &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjeu    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjnato  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjnatop &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjosce  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjoecd  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjcoe   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjcomnw &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjfranc &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjgenev &lt;dbl&gt; 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-$ rgjgattw &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjapec  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjasean &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjseato &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjoas   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjmerc  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjopec  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjarabl &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjoau   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjecow  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjiccpr &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjiccp1 &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjachr  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjachpr &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjicj   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ rgjoic   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, …
-$ sftgreg1 &lt;chr&gt; &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE…
-$ sftgreg2 &lt;chr&gt; &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA&quot;, &quot;SA…
-$ sfrgregc &lt;chr&gt; &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE&quot;, &quot;NE…
-$ sftgreg  &lt;chr&gt; &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS&quot;, &quot;AS…
-$ rgjfdem  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Data</span> <span class='op'>&lt;-</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>education</span>, <span class='va'>Regime_chng</span>,</span>
-<span>         by <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"year"</span>, <span class='st'>"country_code"</span> <span class='op'>=</span> <span class='st'>"pitfcode"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
-</div>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>countries</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"NIC"</span>, <span class='st'>"VEN"</span>, <span class='st'>"HUN"</span> <span class='op'>)</span></span>
-<span><span class='va'>VEN</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='st'>"VEN"</span><span class='op'>)</span></span></code></pre>
-</div>
-</div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
 <span><span class='va'>VEN_diagram</span> <span class='op'>&lt;-</span> <span class='va'>VEN</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
-<span>                y <span class='op'>=</span> <span class='va'>pri_comp_rate_pct</span>,</span>
+<span>                y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span> ,</span>
 <span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"primary School Completion Rate"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Primary School Completion Rate after Regime Change in Venezuala"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>       y <span class='op'>=</span> <span class='st'>"primary School Enrollment "</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>"Primary School Enrollment after Regime Change in Venezuala"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2005</span>, color <span class='op'>=</span> <span class='st'>"red"</span><span class='op'>)</span></span>
-<span>  </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2005</span>, color <span class='op'>=</span> <span class='st'>"blue3"</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
 <span><span class='va'>VEN_diagram</span></span></code></pre>
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" alt="" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='va'>VEN_d</span> <span class='op'>&lt;-</span> <span class='va'>VEN</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>diagram_1</span> <span class='op'>&lt;-</span> <span class='va'>SEN</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
 <span>                y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span>,</span>
 <span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"primary School Completion Rate"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Primary School enrollment after Regime Change in Venezuala"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>       y <span class='op'>=</span> <span class='st'>"primary School Enrollment"</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>"Primary School enrollmentafter Regime Change Sengal"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2005</span>, color <span class='op'>=</span> <span class='st'>"red"</span><span class='op'>)</span></span>
-<span>  </span>
-<span><span class='va'>VEN_d</span></span></code></pre>
-</div>
-<p><img src="index_files/figure-html5/unnamed-chunk-5-1.png" alt="" width="624" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>EC</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='st'>"ECU"</span><span class='op'>)</span></span></code></pre>
-</div>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>diagram</span> <span class='op'>&lt;-</span> <span class='va'>EC</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
-<span>                y <span class='op'>=</span> <span class='va'>pri_comp_rate_pct</span>,</span>
-<span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"primary School Completion Rate"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Primary School Completion Rate after Regime Change in Ecuador"</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> </span>
-<span>               <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span> <span class='op'>(</span><span class='fl'>2000</span>,<span class='fl'>2007</span><span class='op'>)</span>, color <span class='op'>=</span> <span class='st'>"red"</span><span class='op'>)</span></span>
-<span>  </span>
-<span><span class='va'>diagram</span></span></code></pre>
-</div>
-<p><img src="index_files/figure-html5/unnamed-chunk-7-1.png" alt="" width="624" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>SEN</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='st'>"SEN"</span><span class='op'>)</span></span></code></pre>
-</div>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>diagram_1</span> <span class='op'>&lt;-</span> <span class='va'>SEN</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
-<span>                y <span class='op'>=</span> <span class='va'>pri_comp_rate_pct</span>,</span>
-<span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"primary School Completion Rate"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Primary School Completion Rate after Regime Change Sengal"</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2007</span>, color <span class='op'>=</span> <span class='st'>"red"</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2007</span>, color <span class='op'>=</span> <span class='st'>"green3"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
 <span>  </span>
 <span><span class='va'>diagram_1</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-9-1.png" alt="" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-6-1.png" alt="" width="624" /></p>
 </div>
-<p>These three graphs attempt to analyze how authoritarian regime change effects education over time. While there is no clear pattern in these three countries, I hope to work with education data that goes farther into the past with less missing data to look at more countries and see if there is any trend.</p>
+<h2 id="sengal-and-venezuala">Sengal and Venezuala</h2>
+<p>These three graphs visualize how regime change impacts primary school enrollment by looking at these two countries there are no assumptions we can make about how authoritarian regime changes effect primary school enrollment because the sample size is to small however by looking at patterns in more countries we can start to make causal assumptions.</p>
 <h2 id="prepping-the-data">Prepping The Data</h2>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>trans</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SEN"</span>, <span class='st'>"COM"</span>, <span class='st'>"ECU"</span>, <span class='st'>"FJI"</span>, <span class='st'>"GNB"</span>, <span class='st'>"IRQ"</span>, <span class='st'>"KEN"</span>, <span class='st'>"MAC"</span>, <span class='st'>"PAK"</span>, <span class='st'>"PNG"</span>, <span class='st'>"RUS"</span>, <span class='st'>"SEN"</span>, <span class='st'>"VEN"</span><span class='op'>)</span><span class='op'>)</span></span>
-<span><span class='va'>trans</span></span></code></pre>
-</div>
-<pre><code># A tibble: 129 × 66
-   country country_code  year gov_exp_pct_gdp lit_rate_adult_pct
-   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;           &lt;dbl&gt;              &lt;dbl&gt;
- 1 Comoros COM           1999           NA                    NA
- 2 Comoros COM           2000           NA                    68
- 3 Comoros COM           2002            2.26                 NA
- 4 Comoros COM           2003           NA                    NA
- 5 Comoros COM           2004           NA                    NA
- 6 Comoros COM           2007           NA                    NA
- 7 Comoros COM           2008            4.42                 NA
- 8 Comoros COM           2009           NA                    NA
- 9 Comoros COM           2010           NA                    NA
-10 Ecuador ECU           1999            1.55                 NA
-# ℹ 119 more rows
-# ℹ 61 more variables: pri_comp_rate_pct &lt;dbl&gt;,
-#   pupil_teacher_primary &lt;dbl&gt;, pupil_teacher_secondary &lt;dbl&gt;,
-#   school_enrol_primary_pct &lt;dbl&gt;, school_enrol_secondary_pct &lt;dbl&gt;,
-#   school_enrol_tertiary_pct &lt;dbl&gt;, cowcode &lt;dbl&gt;, rgjtype &lt;chr&gt;,
-#   rgjdem &lt;dbl&gt;, rgjtrans &lt;dbl&gt;, rgjdurd &lt;dbl&gt;, rgjtaut &lt;dbl&gt;,
-#   rgjatype &lt;dbl&gt;, rgjaltl &lt;dbl&gt;, rgjaltlt &lt;dbl&gt;, rgjaltp &lt;dbl&gt;, …</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Data</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>country_code</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>change_year <span class='op'>=</span> <span class='va'>year</span><span class='op'>[</span><span class='va'>rgjtrans</span> <span class='op'>==</span> <span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,</span>
-<span>         event_time <span class='op'>=</span> <span class='va'>year</span> <span class='op'>-</span> <span class='va'>change_year</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span><span class='op'>(</span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>align</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span>        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span> <span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span></span>
-<span><span class='va'>align</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>country_code</span>, <span class='va'>year</span>, <span class='va'>rgjtrans</span>, <span class='va'>change_year</span>, <span class='va'>event_time</span><span class='op'>)</span></span></code></pre>
-</div>
-<pre><code># A tibble: 84 × 5
-   country_code  year rgjtrans change_year event_time
-   &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
- 1 COM           1999       -1        1999          0
- 2 COM           2000        0        1999          1
- 3 COM           2002        1        1999          3
- 4 COM           2003        0        1999          4
- 5 COM           2004        0        1999          5
- 6 ECU           1999        0        2000         -1
- 7 ECU           2000       -1        2000          0
- 8 ECU           2001        0        2000          1
- 9 ECU           2002        0        2000          2
-10 ECU           2003        1        2000          3
-# ℹ 74 more rows</code></pre>
-</div>
 <h2 id="visualizing-primary-school-enrollment-before-and-after-an-authoritarian-regime-change">Visualizing primary school enrollment before and after an Authoritarian regime change</h2>
+<p>Trying something</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>before_rg_change</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&lt;</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>full_plot</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>event_time</span>,</span>
 <span>                       y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span>,</span>
 <span>                       color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Primary School Enrollment Before Regime Change"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Years Before Regime Change"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Percent Primary School Enrollment"</span><span class='op'>)</span> </span>
-<span><span class='va'>before_rg_change</span></span></code></pre>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span>linewidth <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>1.5</span>, alpha <span class='op'>=</span> <span class='fl'>0.4</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>0</span>, color <span class='op'>=</span> <span class='st'>"red"</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Primary School Enrollment And Regime Change"</span>,</span>
+<span>       x <span class='op'>=</span> <span class='st'>"Years To Regime Change"</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>"Primary School Enrollment"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>full_plot</span></span></code></pre>
 </div>
-<img src="index_files/figure-html5/unnamed-chunk-12-1.png" alt="" width="624" />
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>after_rg_change</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>event_time</span>,</span>
-<span>                       y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span>,</span>
-<span>                       color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Primary School Enrollment After Regime Change"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Years Since Regime Change"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Primary School Enrollment (%)"</span><span class='op'>)</span></span>
-<span><span class='va'>after_rg_change</span></span></code></pre>
-</div>
-<p><img src="index_files/figure-html5/unnamed-chunk-12-2.png" alt="" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-9-1.png" alt="" width="624" /></p>
 </div>
 <h2 id="interpretation">Interpretation</h2>
 <p>These graphs show what individuals countries primary school enrollment rate look like before and after regime change however there is not very clear patterns within while some countries primary school enrollment goes up drastically before an authoritarian regime change others enrollment shoots down. In the After graph again there is not a super clear visual pattern countries have different patterns however there is more data on countries after the regime change and more countries to analyze. Overall in the after graph primary school enrollment rates seem sightly more stable.</p>
@@ -1832,6 +1623,7 @@ $ rgjfdem  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</c
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ba_enroll_chrt</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span> </span>
 <span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
 <span>    before_after <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&lt;</span> <span class='fl'>0</span>, <span class='st'>"Before"</span>,<span class='st'>"After"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>before_after</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
@@ -1839,58 +1631,193 @@ $ rgjfdem  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</c
 <span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
 <span>    names_from<span class='op'>=</span> <span class='st'>"before_after"</span>,</span>
 <span>    values_from <span class='op'>=</span> <span class='st'>"mean_enroll"</span></span>
-<span>  <span class='op'>)</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>  ATE <span class='op'>=</span> <span class='va'>After</span> <span class='op'>-</span> <span class='va'>Before</span><span class='op'>)</span></span>
 <span><span class='va'>ba_enroll_chrt</span><span class='op'>|&gt;</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption<span class='op'>=</span> <span class='st'>"Primary school enrollment Before and after regime change"</span>, digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Before"</span>, <span class='st'>"After"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>Before</span>, <span class='va'>After</span>, <span class='va'>ATE</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span></span>
+<span>  caption<span class='op'>=</span> <span class='st'>"Primary school enrollment Before and after regime change"</span>,</span>
+<span>digits<span class='op'>=</span><span class='fl'>2</span>, </span>
+<span>col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Before"</span>, <span class='st'>"After"</span>, <span class='st'>"ATE"</span><span class='op'>)</span><span class='op'>)</span> </span></code></pre>
 </div>
 <table>
-<caption><span id="tab:unnamed-chunk-13">Table 1: </span>Primary school enrollment Before and after regime change</caption>
+<caption><span id="tab:unnamed-chunk-10">Table 1: </span>Primary school enrollment Before and after regime change</caption>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Before</th>
 <th style="text-align: right;">After</th>
+<th style="text-align: right;">ATE</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">92.93</td>
-<td style="text-align: right;">95.59</td>
+<td style="text-align: right;">97.39</td>
+<td style="text-align: right;">92.36</td>
+<td style="text-align: right;">-5.02</td>
 </tr>
 </tbody>
 </table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ba_enroll_chrt</span></span></code></pre>
 </div>
+<pre><code># A tibble: 1 × 3
+  After Before   ATE
+  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1  92.4   97.4 -5.02</code></pre>
+</div>
+<h3 id="linear-regression">Linear Regression</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span> <span class='va'>pri_enroll_chrt</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>rgjtype</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>mean_enroll <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>rgjtype</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"D"</span>, <span class='st'>"A"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
-<span>    names_from<span class='op'>=</span> <span class='st'>"rgjtype"</span>,</span>
-<span>    values_from <span class='op'>=</span> <span class='st'>"mean_enroll"</span></span>
-<span>  <span class='op'>)</span> </span>
-<span><span class='va'>pri_enroll_chrt</span><span class='op'>|&gt;</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption <span class='op'>=</span> <span class='st'>"primary school enrollment by regime type"</span>, digits<span class='op'>=</span><span class='fl'>2</span>, col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Authoritarian"</span>, <span class='st'>"Democratic"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Data</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>post <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span> <span class='op'>~</span> <span class='va'>post</span>, data <span class='op'>=</span> <span class='va'>Data</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>fit</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>broom</span><span class='fu'>::</span><span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>term</span>, <span class='va'>estimate</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>knitr</span><span class='fu'>::</span> <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
-<caption><span id="tab:unnamed-chunk-14">Table 2: </span>primary school enrollment by regime type</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Authoritarian</th>
-<th style="text-align: right;">Democratic</th>
+<th style="text-align: left;">term</th>
+<th style="text-align: right;">estimate</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">98.7</td>
-<td style="text-align: right;">104.11</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">97.39</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">post</td>
+<td style="text-align: right;">-5.02</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h2 id="interpretation-1">Interpretation</h2>
-<p>Before authoritarian regime changes countries have higher rates of primary school enrollment 3.75 percent higher than after a country has been taken over by an authoritarian government. This makes sense because overall Authoritarian regime types have much lower rates of primary school enrollment as compared to democracies, so when regime type changes from a democratic government to an authoritarian one it would make sense that primary school enrollment would go down.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><em>Before</em> authoritarian regime changes countries have higher rates of primary school enrollment was 2.66 percentage points higher than <em>after</em> a country has been taken over by an authoritarian government. When running a regression holding constant for event time frame we see that when event time is held at 0 for before regime change the average primary school enrollment is 97.39. When we look at the post regime change 1 primary school enrollment decreases by 5.02.</p>
+<h2 id="code-printout">Code Printout</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyr.tidyverse.org'>tidyr</a></span><span class='op'>)</span></span>
+<span><span class='va'>education</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Data/world-education-data 2.csv"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>education</span><span class='op'>)</span></span>
+<span><span class='va'>Regime_chng</span> <span class='op'>&lt;-</span>  <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Data/rgj2010.csv"</span><span class='op'>)</span> </span>
+<span><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>Regime_chng</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='va'>Data</span> <span class='op'>&lt;-</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>education</span>, <span class='va'>Regime_chng</span>,</span>
+<span>         by <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"year"</span>, <span class='st'>"country_code"</span> <span class='op'>=</span> <span class='st'>"pitfcode"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>countries</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"NIC"</span>, <span class='st'>"VEN"</span>, <span class='st'>"HUN"</span> <span class='op'>)</span></span>
+<span><span class='va'>VEN</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='st'>"VEN"</span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='va'>VEN_diagram</span> <span class='op'>&lt;-</span> <span class='va'>VEN</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
+<span>                y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span> ,</span>
+<span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>"primary School Enrollment "</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>"Primary School Enrollment after Regime Change in Venezuala"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2005</span>, color <span class='op'>=</span> <span class='st'>"blue3"</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>VEN_diagram</span></span>
+<span><span class='va'>SEN</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='st'>"SEN"</span><span class='op'>)</span></span>
+<span><span class='va'>diagram_1</span> <span class='op'>&lt;-</span> <span class='va'>SEN</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span>  <span class='va'>year</span> ,</span>
+<span>                y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span>,</span>
+<span>                fill<span class='op'>=</span> <span class='va'>country_code</span>, color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span> <span class='st'>"year"</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>"primary School Enrollment"</span>,</span>
+<span>       title <span class='op'>=</span> <span class='st'>"Primary School enrollmentafter Regime Change Sengal"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>2007</span>, color <span class='op'>=</span> <span class='st'>"green3"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  </span>
+<span><span class='va'>diagram_1</span></span>
+<span><span class='va'>trans</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>country_code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SEN"</span>, <span class='st'>"COM"</span>, <span class='st'>"ECU"</span>, <span class='st'>"FJI"</span>, <span class='st'>"GNB"</span>, <span class='st'>"IRQ"</span>, <span class='st'>"KEN"</span>, <span class='st'>"MAC"</span>, <span class='st'>"PAK"</span>, <span class='st'>"PNG"</span>, <span class='st'>"RUS"</span>, <span class='st'>"SEN"</span>, <span class='st'>"VEN"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>trans</span></span>
+<span><span class='va'>Data</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>country_code</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>change_year <span class='op'>=</span> <span class='va'>year</span><span class='op'>[</span><span class='va'>rgjtrans</span> <span class='op'>==</span> <span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,</span>
+<span>         event_time <span class='op'>=</span> <span class='va'>year</span> <span class='op'>-</span> <span class='va'>change_year</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>ungroup</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>align</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span> <span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span></span>
+<span><span class='va'>align</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>country_code</span>, <span class='va'>year</span>, <span class='va'>rgjtrans</span>, <span class='va'>change_year</span>, <span class='va'>event_time</span><span class='op'>)</span></span>
+<span><span class='va'>full_plot</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>event_time</span>,</span>
+<span>                       y <span class='op'>=</span> <span class='va'>school_enrol_primary_pct</span>,</span>
+<span>                       color <span class='op'>=</span> <span class='va'>country_code</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span>linewidth <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>1.5</span>, alpha <span class='op'>=</span> <span class='fl'>0.4</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>0</span>, color <span class='op'>=</span> <span class='st'>"red"</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Primary School Enrollment And Regime Change"</span>,</span>
+<span>       x <span class='op'>=</span> <span class='st'>"Years To Regime Change"</span>,</span>
+<span>       y <span class='op'>=</span> <span class='st'>"Primary School Enrollment"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span>,</span>
+<span>    legend.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>full_plot</span></span>
+<span><span class='va'>ba_enroll_chrt</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    before_after <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&lt;</span> <span class='fl'>0</span>, <span class='st'>"Before"</span>,<span class='st'>"After"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>before_after</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>mean_enroll <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span>, na.rm<span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span></span>
+<span>    names_from<span class='op'>=</span> <span class='st'>"before_after"</span>,</span>
+<span>    values_from <span class='op'>=</span> <span class='st'>"mean_enroll"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>  ATE <span class='op'>=</span> <span class='va'>After</span> <span class='op'>-</span> <span class='va'>Before</span><span class='op'>)</span></span>
+<span><span class='va'>ba_enroll_chrt</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>Before</span>, <span class='va'>After</span>, <span class='va'>ATE</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span></span>
+<span>  caption<span class='op'>=</span> <span class='st'>"Primary school enrollment Before and after regime change"</span>,</span>
+<span>digits<span class='op'>=</span><span class='fl'>2</span>, </span>
+<span>col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Before"</span>, <span class='st'>"After"</span>, <span class='st'>"ATE"</span><span class='op'>)</span><span class='op'>)</span> </span>
+<span><span class='va'>ba_enroll_chrt</span></span>
+<span><span class='va'>Data</span> <span class='op'>&lt;-</span> <span class='va'>Data</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>event_time</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='op'>-</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>event_time</span> <span class='op'>&lt;=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>post <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>event_time</span> <span class='op'>&gt;=</span> <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>school_enrol_primary_pct</span> <span class='op'>~</span> <span class='va'>post</span>, data <span class='op'>=</span> <span class='va'>Data</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>fit</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>broom</span><span class='fu'>::</span><span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>term</span>, <span class='va'>estimate</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>knitr</span><span class='fu'>::</span> <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
