@@ -188,7 +188,7 @@ fit |>
 
 
 ## Interpretation
-*Before* authoritarian regime changes countries have higher rates of primary school enrollment was 2.66 percentage points higher than *after* a country has been taken over by an authoritarian government. When running a regression holding constant for event time frame we see that when event time is held at 0 for before regime change the average primary school enrollment is 97.39. When we look at the post regime change 1 primary school enrollment decreases by 5.02.
+*Before* authoritarian regime changes countries have higher rates of primary school enrollment was 5.02 percentage points higher than *after* a country has been taken over by an authoritarian government. When running a regression holding constant for event time frame we see that when event time is held at 0 for before authoritarian regime change the average primary school enrollment is 97.39. When we look at the post regime change 1 primary school enrollment decreases by 5.02. 
 
 ## Code Printout
 
