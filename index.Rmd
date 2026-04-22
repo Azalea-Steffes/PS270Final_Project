@@ -176,6 +176,8 @@ Data <- Data |>
 
 fit <- lm(school_enrol_primary_pct ~ post, data = Data)
 
+summary(fit)
+
 fit |>
   broom::tidy()|>
   select(term, estimate) |>
