@@ -1,18 +1,18 @@
 ---
-title: "PS270 Final Project"
+title: "How Authoritarian Regime Change Impacts Primary School Enrollment"
 author: "Azalea Steffes"
-description: "My final project"
+description: "Research exploring potential causal impacts of authoritarian regime change on primary school enrollment"
 output:
   distill::distill_article:
     self_contained: false
 ---
 
 
-## How Authoritarian Regime Change Impacts Primary School Enrollment
+## Introduction
 
-Education is a critical indicator of free and democratic countries. Primary school education is fundamental for the development of countries and when governments restrict access to this right it signals a trend in democratic back sliding. I want to identify patterns in primary school enrollment surrounding regime change to understand if decreasing primary school enrollment could be an early warning sign to regime change. My *research question* "Is regime change from democracy to an authoritarian government accompanied by a decrease in primary school enrollment"? this  research analyzes how regime change impacts primary school enrollment.Freedom to get an education is an important indicator of how democratic a country is but in my research I want to specifically analyze if regime change may have a causal effect on primary school enrollment. I hypothesize that countries who have experienced an authoritarian regime change will have a much lower rate of primary school enrollment after the transition. I am using two data sets to complete this analysis.The first is ___________ from Harvard which measures Democracy on a dichotomous scale based on whether the country holds free elections. The main variable I will be looking at is `Rgj_trans` this is my independent variable because I'm interested in exploring the effects of regime change. For my dependent variable I am using `school_enrol_primary_pct` taken from a kaggle data set with world bank data. This variable is the percentage of primary aged students in a country actually enrolled in primary school.  
+Education is a critical indicator of free and democratic countries. Primary school education is fundamental for the development of countries and when governments restrict access to this right it signals a trend in democratic back sliding. I want to identify patterns in primary school enrollment surrounding regime change to understand if decreasing primary school enrollment could be an early warning sign to regime change. My *research question* "Is regime change from democracy to an authoritarian government accompanied by a decrease in primary school enrollment"? this  research analyzes how regime change impacts primary school enrollment.Freedom to get an education is an important indicator of how democratic a country is but in my research I want to specifically analyze if regime change may have a causal effect on primary school enrollment. I **hypothesize** that countries who have experienced an authoritarian regime change will have a much lower rate of primary school enrollment after the transition. I am using two data sets to complete this analysis.The first is the Democracy/Autocracy Data Set from Harvard which measures democracy on a dichotomous scale based on whether the country holds free elections, allows equal participation in government and protection of civil iberties. The main variable I will be looking at is `Rgj_trans` this is my **independent** variable because I'm interested in exploring the effects of regime change. For my **dependent** variable I am using `school_enrol_primary_pct` taken from a kaggle data set with world bank data. This variable is the percentage of primary aged students in a country actually enrolled in primary school.  
    
-To conduct this research I will be using a differences in differences design.For my treatment group I will look at countries who have experienced a regime change and find how primary school enrollment differs in a ten year window before and after. For my control group I have taken countries who have not experienced regime change and looked at primary school enrollment of these countries in a 10 year window from 1999 to 2001 and to create a before and after design for the control group I used 2004 as the date for before and after. 
+To conduct this research I will be using a **differences in differences** design.For my treatment group I will look at countries who have experienced a regime change and find how primary school enrollment differs in a ten year window before and after. For my control group I have taken countries who have not experienced regime change and looked at primary school enrollment of these countries in a 10 year window from 1999 to 2001 and to create a before and after design for the control group I used 2004 as the date for before and after. 
    
 In order for the hypothesis to be true the experiment must reject the null hypothesis by finding a **statistically significant** difference between primary school enrollment in the control and treatment groups. School enrollment must decrease in countries that have experienced an authoritarian regime change although the opposite could be true making this experiment two sided. The **null hypothesis** in this case is that regime change has no causal effect on primary school enrollment. 
 
@@ -55,7 +55,7 @@ trt_group <- Data |>
 
 ```
 
-## Data Section:
+## Data Section
 
 ### Visualizing primary school enrollment before and after an Authoritarian regime change
 
@@ -80,7 +80,7 @@ full_plot
 
 
 
-### Average Treatment Effect: Treatment Group
+#### Average Treatment Effect: Treatment Group
 
 ```{r, echo= FALSE}
 ATE_treatment <- trt_group |> 
@@ -128,7 +128,7 @@ control_countries <- Data |>
   ungroup()   
 ```
 
-### Creating a Control Group:
+### Creating a Control Group
 #### Control Group Visualization
 
 ```{r, echo = FALSE}
@@ -152,7 +152,7 @@ full_plot <- control_countries |>
 full_plot
 ```
 
-### Average Treatment Effect: Control Group
+#### Average Treatment Effect: Control Group
 
 ```{r, echo =FALSE}
 ATE_control <- control_countries |> 
@@ -181,7 +181,7 @@ did_estimate
 
 
 
-### Results
+## Results
 
 ```{r, echo=FALSE}
 tibble(
@@ -218,8 +218,8 @@ modelsummary(did_model,
 
 ```
 
-## Interpretation
-After running the **Differences in Differences** estimate there was a 3.1 percentage point difference in primary school enrollment between the **treatment group** (countries who have experienced authoritarian regime change) and **control group** (countries who have not) while this aligns with my hypothesis that countries who have experienced regime change will see a decrease in primary school enrollment the results are not statistically significant. With a **P- value of 0.447** we cannot reject the **null hypothesis** that "Regime change has no causal effect on primary school enrollment". There are a couple limiting factors to this analysis however first being that with missing data and limited years their were only six countries with a regime change to analyze. Second the baseline primary school enrollment for the control and treatment group were different this could be explained by a multitude of **confounding variables** surrounding regime change and primary school enrollment including GDP, Inequality, Instability and other factors that lead to regime change and could reduce primary school enrollment. In the future to get better results it would be better to use a larger sample of countries that experienced authoritarian regime change.
+### Interpretation
+After running the **Differences in Differences** estimate there was a 3.1 percentage point difference in primary school enrollment between the **treatment group** (countries who have experienced authoritarian regime change) and **control group** (countries who have not) while this aligns with my hypothesis that countries who have experienced regime change will see a decrease in primary school enrollment the results are not statistically significant. With a **P- value of 0.447** we cannot reject the **null hypothesis** that "Regime change has no causal effect on primary school enrollment". There are a couple limiting factors to this analysis. First being that there is missing data and limited years in both data sets there were only six countries with a regime change to analyze. Second the baseline primary school enrollment for the control and treatment group were different. The treatment group had a baseline primary school enrollment that was 7.22 percentage points lower than the control group. this could be explained by a multitude of **confounding variables** surrounding regime change and primary school enrollment including GDP, Inequality, Instability and other factors that lead to regime change and could reduce primary school enrollment. Because there is no causal impact of regime change on primary school enrollment decreasing primary school enrollment may not be an indicator of democratic backsliding toward regime change. In the future to get better results it would be better to use a larger sample of countries that experienced authoritarian regime change and collect more data on education variables to figure out key education indicators of regime change.
 
 
 ## Code Printout
