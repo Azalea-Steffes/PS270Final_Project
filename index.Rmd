@@ -10,9 +10,9 @@ output:
 
 ## Introduction
 
-Education is a key indicator of a free and democratic countries. Primary school education is fundamental for the development of countries because youth are the future when governments restrict access to this right it could signal a trend in democratic back sliding. I want to identify patterns in primary school enrollment surrounding regime change to understand if decreasing primary school enrollment could be an early warning sign to regime change.
+Education is a key indicator of a free and democratic countries. Primary school education is fundamental for the development of countries because youth are the future and when governments restrict access to this right it could signal a trend in democratic back sliding. I want to identify patterns in primary school enrollment surrounding regime change to understand if decreasing primary school enrollment could be an early warning sign to regime change.
 
-My *research question:* "is regime change from democracy to an authoritarian government accompanied by a decrease in primary school enrollment"? In my research I want to specifically analyze if regime change may have a causal effect on primary school enrollment. I **hypothesize** that countries who have experienced an authoritarian regime change will have a much lower rate of primary school enrollment after the transition because freedom to get an education is an important indicator of how democratic a country is and countries experiencing authoritarian regime change typically have signs of democratic backsliding. 
+My **research question:** "is regime change from democracy to an authoritarian government accompanied by a decrease in primary school enrollment"? In my research I want to specifically analyze if regime change may have a causal effect on primary school enrollment. I **hypothesize** that countries who have experienced an authoritarian regime change will have a much lower rate of primary school enrollment after an authoritarian regime change because freedom to get an education is an important indicator of how democratic a country is and countries experiencing authoritarian regime change typically have signs of democratic backsliding. 
 
    
    
@@ -77,7 +77,7 @@ outcome <- ggplot(data= Data, mapping = aes(x= school_enrol_primary_pct)) +
     legend.text = element_text(size = 8))
 outcome
 ```
-The outcome of interest in this experiment is primary school enrollment most of the data in this variable is centered around 100% primary school enrollment although some goes over which could be explained by older or younger students not considered in the primary school age range being enrolled in primary school. there are also some countries that have much lower primary school enrollment likely countries that are lower income or facing more instability.
+The outcome of interest in this experiment is primary school enrollment most of the data in this variable is centered around 100% primary school enrollment. Although some goes over which could be explained by older or younger students not considered in the primary school age range being enrolled in primary school. There are also some countries that have much lower primary school enrollment likely countries that are lower income or facing more instability.
 
 ## Results 
 
@@ -132,7 +132,7 @@ col.names = c("Before", "After", "ATE"))
 
 
 ```
-This graph shows how primary school enrollment in the years preceding and following a regime change. In Countries who have experienced regime change primary school enrollment goes down by 0.24 percentage points in the five year period following a regime change
+This graph shows how primary school enrollment in the years preceding and following a regime change. In countries who have experienced regime change primary school enrollment goes down by 0.24 percentage points in the five year period following a regime change
 
 ```{r, include=FALSE}
 fit <- lm(school_enrol_primary_pct ~ post, data = trt_group)
@@ -201,7 +201,7 @@ knitr::kable(
 digits=2, 
 col.names = c("Before", "After", "ATE")) 
 ```
-This graph shows primary school enrollment in a 10 year period in countries who have not experienced regime change. In the 5 year period following the random date used to simulate a before and after design, Primary school enrollment goes up in the given 5 year window. Specifically it increases 2.87 percentage points
+This graph shows primary school enrollment in a 10 year period in countries who have not experienced regime change. In the 5 year period following the random date used to simulate a before and after design, Primary school enrollment goes up in the given 5 year window. Specifically, it increases 2.87 percentage points.
 
 ```{r, include= FALSE}
 did_estimate <- ATE_treatment$ATE - ATE_control$ATE
@@ -255,9 +255,7 @@ tibble(
 When comparing the control and treatment group the average treatment effect of regime change on primary school enrollment is a 3.10 percentage point decrease. Countries who have had an Authoritarian regime change experienced 3.10 percentage points lower primary school enrollment than countries who did not experience an authoritarian regime change.
 
 
-
-### Running a Regression
-```{r, echo = FALSE}
+```{r}
 did_model <- lm(
   school_enrol_primary_pct ~ treated * post,
   data = did_data)
@@ -270,6 +268,10 @@ After running the **Differences in Differences** estimate there was a 3.1 percen
 
 ## Conclusion
 This Research finds no statistical significance to support that authoritarian regime change decreases primary school enrollment. There are a couple limiting factors to this analysis. First there is a lot of missing education data which reduced the amount of countries within the treatment group (countries who experienced regime change) down to only six with such a low sample size there is a large amount of variance within the data. Another limitation of this analysis is confounding variables regime change and primary school enrollment share a multitude of **confounding variables** including low GDP, Inequality, and Instability. These factors can all lead to lower primary school enrollment and signal democratic backsliding that leads to an authoritarian regime change in future experiments it could be useful to control for these to factor out the confounding variables. Because there is no causal impact of regime change on primary school enrollment decreasing primary school enrollment may not be an indicator of democratic backsliding toward regime change. In the future to get better results it would be better to use a larger sample of countries that experienced authoritarian regime change and collect more data on education variables to figure out key education indicators of regime change.
+
+
+
+
 
 *AI Disclosure*
 
